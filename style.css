@@ -5,13 +5,14 @@
 :root {
   /* Colors */
   --color-text: #1e293b;
-  --color-primary: #78350f;
+  --color-border: var(--color-text);
+  --color-primary: #0c4a6e;
   --color-bg: #f8fafc;
 
   /* Typography */
   --font-medium: 500;
   --font-bold: 700;
-  --text-xs: 0.75rem;
+  --text-xs: 0.875rem;
   --text-lg: 1.25rem;
   --text-xl: 1.5rem;
 }
@@ -21,6 +22,12 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: "IBM Plex Mono", monospace;
+  font-size: 1.125rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
@@ -38,10 +45,11 @@ nav ul li a {
   font-weight: var(--font-medium);
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
 /* Components */
@@ -61,7 +69,7 @@ nav ul li a:hover {
 
 /* Header */
 header {
-  border-bottom: 1px solid var(--color-text);
+  border-bottom: 2px dashed var(--color-border);
   padding: 32px 0;
 }
 
@@ -86,10 +94,13 @@ main :where(p) {
 
 /* Footer */
 footer {
-  border-top: 1px solid var(--color-text);
-  padding: 32px 0;
+  border-top: 2px dashed var(--color-border);
+  font-size: var(--text-xs);
+  padding: 16px 0;
 }
 
-footer p {
-  font-size: var(--text-xs);
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

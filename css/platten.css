@@ -1,0 +1,16 @@
+.record-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 48px;
+
+  padding: 32px 0;
+}
+
+.record--title {
+  font-size: 1rem;
+  margin-top: 16px;
+}
+
+.record img {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
