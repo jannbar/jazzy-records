@@ -13,6 +13,13 @@ function handleButtonClick(event) {
   }
 }
 
+function setYear() {
+  const yearPlaceholder = document.querySelector(".current-year")
+  yearPlaceholder.innerText = new Date().getFullYear()
+}
+
+setYear()
+
 allRecordButtons.forEach((button) => {
   button.addEventListener("click", handleButtonClick)
 })
